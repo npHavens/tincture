@@ -1,11 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { SFC } from 'react';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
-const App = () => {
+import TitleBar from './TitleBar/TitleBar';
+
+const App: SFC = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <TitleBar/>
+    </SafeAreaView>
   );
 };
 
@@ -14,7 +16,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
 });
 
